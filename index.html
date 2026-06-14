@@ -1,14 +1,13 @@
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arknights | Rhodes Island Database</title>
-    <!-- Menghubungkan CSS Eksternal -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigasi Utama -->
     <nav>
         <div class="logo">Rhodes Island</div>
         <ul class="nav-links">
@@ -18,29 +17,70 @@
         </ul>
     </nav>
 
-    <!-- Bagian Home / Intro -->
     <section id="home" class="hero">
         <h1>Selamat Datang di Dunia Terra</h1>
-        <p>Arknights adalah game <strong>Tower Defense RPG</strong> taktikal yang dikembangkan oleh <em>Hypergryph</em>. Game ini menempatkan pemain di dunia pasca-apokaliptik bernama Terra yang penuh dengan intrik politik dan bencana alam.</p>
+        <p>Arknights adalah game <strong>Tower Defense RPG</strong> taktikal yang dikembangkan oleh <em>Hypergryph</em>. Game ini menempatkan pemain di dunia Post-Apocalyptic bernama Terra yang penuh dengan masalah politik dan bencana alam.</p>
         <p>Sebagai pemain, Anda akan berperan sebagai <u>"Doctor"</u>, seorang ahli strategi jenius yang kehilangan ingatannya, memimpin sebuah organisasi medis dan paramiliter bernama <mark>Rhodes Island</mark>.</p>
     </section>
 
-    <!-- Bagian Lore -->
     <section id="lore" class="content-section">
         <h2>Latar Belakang Cerita</h2>
         <p>Di dunia Terra, bencana alam misterius bernama <i>Catastrophes</i> meninggalkan sebuah mineral berharga bernama <b>Originium</b>. Mineral ini membawa kemajuan teknologi yang pesat, namun juga menyebarkan penyakit mematikan yang tak bisa disembuhkan: <b>Oripathy</b>.</p>
-        <p>Mereka yang terinfeksi (Infected) mendapatkan kekuatan sihir (Arts) yang besar, namun tubuh mereka perlahan mengkristal hingga tewas. Karena ketakutan, para Infected dikucilkan, yang memicu munculnya faksi radikal seperti Reunion Movement.</p>
+        <p>Mereka yang terinfeksi (Infected) mendapatkan kekuatan sihir (Arts) yang besar, namun tubuh mereka perlahan mengkristal hingga tewas. Karena rasa takut dan paranoia yang disebabkan oleh Infeksi Oripathy. Banyak penduduk Terra yang tidak terinfeksi mengucilkan mereka, yang memicu munculnya faksi radikal seperti <b>Reunion</b> yang bertujuan untuk menyuarakan hak <i>Infecteds</i> sebagai manusia.</p>
     </section>
 
-    <!-- Bagian Tabel Operator -->
     <section id="operators" class="content-section">
-        <h2>Database Operator Utama</h2>
-        <p>Berikut adalah beberapa operator ikonik yang akan membantu Anda di medan perang:</p>
-        
+        <h2>Database Operator</h2>
+
+        <div class="gallery-grid">
+            <div class="card">
+                <img src="https://static.wikia.nocookie.net/mrfz/images/0/0d/Specter_the_Unchained.png/revision/latest?cb=20220501091147" alt="Specter">
+                <div class="card-info">
+                    <h3>Specter</h3>
+                    <p>Abyssal Hunters</p>
+                    <button class="detail-btn" onclick="openModal('specter')">Lihat Detail</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://static.wikia.nocookie.net/mrfz/images/0/0a/Ulpianus.png/revision/latest?cb=20220501091703" alt="Ulpianus">
+                <div class="card-info">
+                    <h3>Ulpianus</h3>
+                    <p>Abyssal Hunters</p>
+                    <button class="detail-btn" onclick="openModal('ulpianus')">Lihat Detail</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://static.wikia.nocookie.net/mrfz/images/b/b1/Chongyue.png/revision/latest?cb=20230117040033" alt="ChongYue">
+                <div class="card-info">
+                    <h3>ChongYue</h3>
+                    <p>Yan (Sui)</p>
+                    <button class="detail-btn" onclick="openModal('chongyue')">Lihat Detail</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://static.wikia.nocookie.net/mrfz/images/6/6d/Ling.png/revision/latest?cb=20220125055507" alt="Ling">
+                <div class="card-info">
+                    <h3>Ling</h3>
+                    <p>Yan (Sui)</p>
+                    <button class="detail-btn" onclick="openModal('ling')">Lihat Detail</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://static.wikia.nocookie.net/mrfz/images/a/ae/Typhon.png/revision/latest?cb=20230706163424" alt="Typhon">
+                <div class="card-info">
+                    <h3>Typhon</h3>
+                    <p>Rhodes Island</p>
+                    <button class="detail-btn" onclick="openModal('typhon')">Lihat Detail</button>
+                </div>
+            </div>
+        </div>
+
+        <p><strong>Ringkasan Data Taktis:</strong></p>
         <div class="table-responsive">
             <table>
                 <thead>
                     <tr>
+                        <th>Visual</th>
                         <th>Nama Operator</th>
                         <th>Class (Peran)</th>
                         <th>Faksi</th>
@@ -49,33 +89,38 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Amiya</td>
-                        <td>Caster</td>
-                        <td>Rhodes Island</td>
-                        <td>⭐⭐⭐⭐⭐</td>
+                        <td><img src="https://arknights.wiki.gg/images/Specter_the_Unchained_icon.png?ba15d1" class="avatar" alt="Specter"></td>
+                        <td>Specter the Unchained</td>
+                        <td>Specialist</td>
+                        <td>Abyssal Hunters</td>
+                        <td>⭐⭐⭐⭐⭐⭐</td>
                     </tr>
                     <tr>
-                        <td>SilverAsh</td>
+                        <td><img src="https://arknights.wiki.gg/images/Ulpianus_icon.png?7e6820" class="avatar" alt="Ulpianus"></td>
+                        <td>Ulpianus</td>
                         <td>Guard</td>
-                        <td>Kjerag</td>
+                        <td>Abyssal Hunters</td>
                         <td>⭐⭐⭐⭐⭐⭐</td>
                     </tr>
                     <tr>
-                        <td>Exusiai</td>
+                        <td><img src="https://arknights.wiki.gg/images/Chongyue_icon.png?e303b0" class="avatar" alt="ChongYue"></td>
+                        <td>ChongYue</td>
+                        <td>Guard</td>
+                        <td>Yan (Sui)</td>
+                        <td>⭐⭐⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://arknights.wiki.gg/images/Ling_icon.png?375750" class="avatar" alt="Ling"></td>
+                        <td>Ling</td>
+                        <td>Supporter</td>
+                        <td>Yan (Sui)</td>
+                        <td>⭐⭐⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://arknights.wiki.gg/images/Typhon_icon.png?3bf745" class="avatar" alt="Typhon"></td>
+                        <td>Typhon</td>
                         <td>Sniper</td>
-                        <td>Penguin Logistics</td>
-                        <td>⭐⭐⭐⭐⭐⭐</td>
-                    </tr>
-                    <tr>
-                        <td>Texas</td>
-                        <td>Vanguard</td>
-                        <td>Penguin Logistics</td>
-                        <td>⭐⭐⭐⭐⭐</td>
-                    </tr>
-                    <tr>
-                        <td>Kal'tsit</td>
-                        <td>Medic</td>
-                        <td>Rhodes Island</td>
+                        <td>Sami</td>
                         <td>⭐⭐⭐⭐⭐⭐</td>
                     </tr>
                 </tbody>
@@ -83,10 +128,79 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <div id="operatorModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalName">Nama Operator</h2>
+            <p class="modal-faction" id="modalFaction">Faksi</p>
+            <hr style="border: 1px solid #333; margin: 15px 0;">
+            <div class="modal-body">
+                <p><strong>Class/Archetype:</strong> <span id="modalClass">Class</span></p>
+                <p><strong>Deskripsi Berkas:</strong></p>
+                <p id="modalDesc">Deskripsi lengkap mengenai operator akan muncul di sini.</p>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2026 Arknights Fan Database | Dibuat untuk Tugas Website</p>
     </footer>
 
+    <script>
+        const operatorData = {
+            specter: {
+                name: "Specter the Unchained",
+                faction: "Abyssal Hunters",
+                class: "Specialist - Dollkeeper",
+                desc: "Specter, nama asli : Laurentina. Merupakan salah satu Abyssal Hunter dan merupakan salah satu dari Pasukan Militer Ægir. Menunjukan kemampuan yang sangat luar biasa dalam melumpuhkan organisme dengan skala besar. Setelah insiden Stultifera Navis, kondisi hati dan mentalnya mulai stabil, dan ingatannya kembali."
+            },
+            ulpianus: {
+                name: "Ulpianus",
+                faction: "Abyssal Hunters",
+                class: "Guard - Crusher",
+                desc: "Ulpianus, Ægir, former Consul of Ægir's Academy of Technology, lead researcher of the Abyssal Hunter project, and a commander of the Ægir military organization of the same name. When and where he came ashore are both unknown. He provides support when Rhodes Island is involved in ocean-related matters."
+            },
+            chongyue: {
+                name: "Chongyue",
+                faction: "Faksi Yan",
+                class: "Guard - Fighter",
+                desc: "Chongyue, the elder brother of landship residents Nian, Dusk, and Ling. He has a close relationship with government organizations such as the Yanese Ministry of War and the Sui Regulator. Previously served as a martial arts instructor at the nomadic city Yumen, a position which he has resigned from. He came to Rhodes Island to visit his family, and after a round of audits, he is temporarily residing onboard the landship as a visitor. Chongyue possesses rich combat experience and has provided Rhodes Island his unique combat suggestions. However, as requested by Dr. Kal'tsit, Chongyue rarely participates in missions directly."
+            },
+            ling: {
+                name: "Ling",
+                faction: "Faksi Yan",
+                class: "Supporter - Summoner",
+                desc: "Ling, resident poet of Shangshu, tied to the Sui Regulator and other governmental organs of Yan. Came into contact with Rhodes Island during the Shangshu incident. Now remaining as a visitor aboard the landship, following thorough audits."
+            },
+            typhon: {
+                name: "Typhon",
+                faction: "Wilayah Sami",
+                class: "Sniper - Besieger",
+                desc: "Typhon, a Sarkaz active in Sami, considers herself a hunter and has both the knowledge and skills to deal with the dangers of Sami's natural environment. At Operator Magallan's invitation, she is currently cooperating with Rhodes Island and assisting in our affairs in Sami and the endless icefields."
+            }
+        };
+
+        function openModal(key) {
+            const data = operatorData[key];
+            if(data) {
+                document.getElementById('modalName').innerText = data.name;
+                document.getElementById('modalFaction').innerText = "Faksi: " + data.faction;
+                document.getElementById('modalClass').innerText = data.class;
+                document.getElementById('modalDesc').innerText = data.desc;
+                document.getElementById('operatorModal').style.display = "block";
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('operatorModal').style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('operatorModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
